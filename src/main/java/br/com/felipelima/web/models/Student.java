@@ -11,12 +11,12 @@ import lombok.Data;
 @Entity
 @Table
 @Data
-public class Pessoa {
+public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE)
     Long id;
 
     String nome;
 
-
+    
 }
