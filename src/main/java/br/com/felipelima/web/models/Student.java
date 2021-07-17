@@ -13,7 +13,7 @@ import lombok.Data;
 @Data
 public class Student {
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     String name;
