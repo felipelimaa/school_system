@@ -16,4 +16,8 @@ public class SchoolService {
     public List<School> findAll() {
         return schoolRepository.findAll();
     }
+
+    public School save(School school){
+        return schoolRepository.save(school);
+    }
 }
