@@ -1,5 +1,9 @@
 package br.com.felipelima.web.models;
 
+import java.io.Serializable;
+import java.math.BigDecimal;
+
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,14 +13,17 @@ import javax.persistence.Table;
 import lombok.Data;
 
 @Entity
-@Table
+@Table(name = "school")
 @Data
-public class School {
+public class School implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(nullable = false, unique = true)
     Long id;
 
+    @Column(nullable = false)
     String school;
 
-    Number cgc;
+    @Column(nullable = false, unique = true)
+    BigDecimal cgc;
 }
