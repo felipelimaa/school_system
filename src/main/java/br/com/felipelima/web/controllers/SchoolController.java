@@ -15,7 +15,7 @@ import br.com.felipelima.web.services.SchoolService;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("schools")
+@RequestMapping("/api/v1/schools")
 @AllArgsConstructor
 public class SchoolController {
     private SchoolService schoolService;

@@ -10,20 +10,52 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table
 @Data
+@Builder
+@NoArgsConstructor
+@AllArgsConstructor
 public class School implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(nullable = false, unique = true)
-    Long id;
+    private Long id;
 
     @Column(nullable = false)
-    String school;
+    private String school;
 
-    @Column(nullable = false, unique = true)
-    BigDecimal cgc;
+    @Column(nullable = false, unique = true, length = 14)
+    private BigDecimal cgc;
+
+
+    public Long getId() {
+        return this.id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getSchool() {
+        return this.school;
+    }
+
+    public void setSchool(String school) {
+        this.school = school;
+    }
+
+    public BigDecimal getCgc() {
+        return this.cgc;
+    }
+
+    public void setCgc(BigDecimal cgc) {
+        this.cgc = cgc;
+    }
+
 }
