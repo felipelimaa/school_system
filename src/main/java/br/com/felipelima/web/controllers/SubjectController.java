@@ -15,7 +15,7 @@ import br.com.felipelima.web.services.SubjectService;
 import lombok.AllArgsConstructor;
 
 @RestController
-@RequestMapping("subjects")
+@RequestMapping("/api/v1/subjects")
 @AllArgsConstructor
 public class SubjectController {
     private SubjectService subjectService;
